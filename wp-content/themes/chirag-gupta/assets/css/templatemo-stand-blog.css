@@ -194,7 +194,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #f48840;
+	color: #f48840!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -225,7 +225,7 @@ header .navbar {
 .navbar .navbar-nav .nav-item {
 	margin: 0px 15px;
 }
-.navbar .navbar-nav .nav-link a{
+.navbar .navbar-nav a.nav-link {
 	text-transform: capitalize;
 	font-size: 15px;
 	font-weight: 800;
@@ -234,10 +234,10 @@ header .navbar {
 	color: #1e1e1e;
 	transition: all 0.3s;
 }
-.navbar .navbar-nav .nav-link a:hover,
+.navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .active>.nav-link,
-.navbar .navbar-nav .nav-link.active a,
-.navbar .navbar-nav .nav-link.show a,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
 	color: #f48840;
 }
@@ -597,7 +597,6 @@ ul.page-numbers li a:hover {
 
 .blog-posts .comments ul li .right-content {
 	margin-left: 130px;
-	display: grid;
 }
 
 .blog-posts .comments ul li .right-content h4 {

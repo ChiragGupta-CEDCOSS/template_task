@@ -4,16 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package template
+ * @package template_demo
  */
 
 get_header();
 ?>
 
 	<main id="primary" class="site-main">
-	<div class = "container pt-5">
-<div class = "main-content  mt-5">
-
 
 		<?php if ( have_posts() ) : ?>
 
@@ -23,21 +20,18 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			<div class="pt-5">
-			<div class="pt-5">
-			<?php  /* Start the Loop */
+
+			<?php
+			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-				echo"<h1>";
-				the_title(); echo":";
-				echo"</h1>";
 
 				/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content',get_theme_mod('display_excerpt_or_full_post', 'post'));
+				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
 
@@ -49,10 +43,7 @@ get_header();
 
 		endif;
 		?>
-		</div>
-		</div>
-</div>
-</div>
+
 	</main><!-- #main -->
 
 <?php
